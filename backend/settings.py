@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'lbrep_db',
+        'ENGINE': '/var/run/postgresql',
+        'NAME': 'lbrep_project',
         'USER': 'postgres',
-        'PASSWORD': '1234',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
