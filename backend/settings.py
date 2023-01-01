@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-xoe40itk$=zdyj*dn2$ws%w5zo0qo!@e9_!)e7evpi(2p4v%pi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['87.107.164.156']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -89,12 +89,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lbrep_project',
-        'USER': 'dashtikh',
-        'PASSWORD': 'dashti1565',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'lbrep_db',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -158,8 +158,6 @@ DJOSER = {
     "USER_CREATE_PASSWORD_RETYPE": True,
     'SEND_ACTIVATION_EMAIL': False,
 }
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 try:
     from .server_settings import *
