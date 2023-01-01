@@ -159,6 +159,8 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': False,
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 try:
     from .server_settings import *
 except ImportError:
