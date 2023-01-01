@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-xoe40itk$=zdyj*dn2$ws%w5zo0qo!@e9_!)e7evpi(2p4v%pi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['87.107.164.156']
 
 # Application definition
 
@@ -89,12 +89,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': '/var/run/postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lbrep_project',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'USER': 'dashtikh',
+        'PASSWORD': 'dashti1565',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
