@@ -163,3 +163,5 @@ try:
     from .server_settings import *
 except ImportError:
     pass
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
