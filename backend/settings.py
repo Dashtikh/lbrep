@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'users',
+    'storages',
     'listings',
     'rest_framework',
     'rest_framework_gis',
@@ -98,6 +99,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'lbrep',
+#         'USER': 'root',
+#         'PASSWORD': 'iuXzNNRmVHnOgH0jmaFnhv9l',
+#         'HOST': 'lbrep',
+#         'PORT': '5432',
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -143,8 +154,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # GEOS_LIBRARY_PATH = 'backend/backend/libgeos.3.11.1.dylib'
 # GDAL_LIBRARY_PATH = './backend/libgdal.dylib'
-# GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
-# GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
 
 AUTH_USER_MODEL = 'users.User'
 
